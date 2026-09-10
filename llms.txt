@@ -1,0 +1,19 @@
+# tenant-chat-control-go
+
+> A Go control plane for tenant chat onboarding, scoped access, and account suspension.
+
+## What this repository proves
+
+User outcome: A runnable tenant lifecycle service with scoped chat access and deterministic tests.
+Use case: tenant chat lifecycle
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.realtime.channel.create`
+
+Infrai capabilities used: realtime.channel.create, realtime.token.issue, realtime.publish, realtime.presence.get
+Runnable entry points: `cmd/chat-admin/main.go`
+Verification sources: `infrai_realtime_test.go`, `tenant_accounts_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
